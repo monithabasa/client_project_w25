@@ -9,7 +9,10 @@
 <body>
 
     <header>
-            <a href = "">Skip to Main Content</a>
+        <a href="#main" class="skip">Skip to Main Content</a>
+        <div class="img-container">
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -21,7 +24,7 @@
         <h1>Center for the Education of Women +</h1>
     </header>
 
-    <main>
+    <main id="main" class="container">
         <section>
             <h2>About CEW+</h2>
             <p>CEW+ was originally established to support women in higher education, 
@@ -30,23 +33,24 @@
                 with academic, financial, and professional support to help individuals overcome 
                 barriers and achieve their personal potential. Below are some of the resources 
                 CEW+ provides: </p>
-                <ol>
-                    <li>Events and Workshops</li>
-                    <li>Funding</li>
-                    <li>Counseling</li>
-                    <li>Advocacy Initiatives</li>
-                </ol> 
+                <div class="section-nav">
+                    <a href="#events" class="section-button">Events and Workshops</a>
+                    <a href="#funding" class="section-button">Funding</a>
+                    <a href="#counseling" class="section-button">Counseling</a>
+                    <a href="#advocacy" class="section-button">Advocacy Initiatives</a>
+                  </div>
+                <figure>
+                    <img src="images/footballgame.jpg" alt="Three students in maize and blue gear smile and pose for a photo in the student section at a Michigan Football game.">
+                    <figcaption>Three students in maize and blue gear smile and pose for a photo in the student section at a Michigan Football game.</figcaption>
+                </figure>
         </section>
-        <figure>
-            <img src="images/footballgame.jpg" alt="Three students in maize and blue gear smile and pose for a photo in the student section at a Michigan Football game.">
-            <figcaption>Three students in maize and blue gear smile and pose for a photo in the student section at a Michigan Football game.</figcaption>
-        </figure>        
-        <section>
+                
+        <section id ="events">
             <h2>Events and Workshops</h2>
             <p>CEW+ hosts a variety of programs aimed at supporting personal 
                 and professional development within the university community.</p>
         </section>
-        <section>
+        <section id ="funding">
             <h2>Funding</h2>
             <p>CEW+ offers funding opportunities to support students, staff, faculty, and 
                 community members in overcoming financial barriers. Some of these opportunities include:</p>
@@ -58,7 +62,7 @@
                     <li>Undergradute Research Fund</li>
                 </ul>
         </section>
-        <section>
+        <section id ="counseling">
             <h2>Counseling</h2>
             <h3>Appointments</h3>
             <p>CEW+ offers free career, education, and emergency funding counseling to U-M students, 
@@ -73,7 +77,7 @@
                 returning to college or graduate school, work/life/family balance issues, and 
                 emergency funding for current U-M Ann Arbor students</p>
         </section>
-        <section>
+        <section id ="advocacy">
             <h2>Advocacy Initiatives</h2>
             <p>CEW+ leads several advocacy initiatives to support diverse voices and promote equity. 
                 These initiatives include:</p>
@@ -93,8 +97,14 @@
         </section>
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-    </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
+        <p>&copy; <span id="year"></span> University of Michigan</p>
+      </footer>
+      
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      
     
 </body>
 

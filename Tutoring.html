@@ -9,7 +9,10 @@
 <body>
 
     <header>
-            <a href = "">Skip to Main Content</a>
+        <a href="#main" class="skip">Skip to Main Content</a>
+        <div class="img-container">
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -21,24 +24,24 @@
         <h1>UMSI Tutoring & Academic Support</h1>
     </header>
 
-    <main>
-        <figure>
-            <img src="images/study.jpg" alt= "A student studies in front of large windows in the Central Campus Classroom Building." >
-            <figcaption>A student studies in front of large windows in the Central Campus Classroom Building.</figcaption>
-        </figure>
+    <main id="main" class="container">
         <section>
             <h2>About UMSI Peer Tutoring Program</h2>
             <p>The UMSI Peer Tutoring program is an opportunity for UMSI students and
                  students taking UMSI courses to engage with peer tutors and 
                  receive assistance and support in UMSI courses. The resources provided and 
                  covered on this site include: </p>
-                <ul>
-                    <li>UMSI Peer Tutoring (Programming Peer Tutoring and Math Peer Tutoring)</li>
-                    <li>Additional Academic Support Resources</li>
-                    <li>Link to the Peer-to-Peer Tutor Directory</li>
-                </ul> 
+                 <div class="section-nav">
+                    <a href="#programming" class="section-button">UMSI Programming Tutoring</a>
+                    <a href="#math" class="section-button">UMSI Math Tutoring</a>
+                    <a href="#additional" class="section-button">Additional Academic Support</a>
+                </div>
+                <figure>
+                    <img src="images/study.jpg" alt= "A student studies in front of large windows in the Central Campus Classroom Building." >
+                    <figcaption>A student studies in front of large windows in the Central Campus Classroom Building.</figcaption>
+                </figure>
         </section>
-        <section>
+        <section id="programming">
             <h2>UMSI Programming Tutoring</h2>
             <p>UMSI Peer Tutoring is available for: SI 106, SI 206, SI 506, SI 507, and general python support</p>
             <ul>
@@ -50,7 +53,7 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section id="math">
             <h2>UMSI Math Tutoring</h2>
             <p>UMSI Peer Tutoring is available for: linear algebra, statistics, and general math relates course support</p>
             <ul>
@@ -59,7 +62,7 @@
                 <li>For algebra, calculus, statistics, SI 325, SI 370, SI 330, SI 544: book an appointment with Nuzhat <a href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1dnYDH3E-HeDHnc-UiSDbQVEzDK2JY7w9tif_Te0iAhy0L6WFvvckhhDWujvfOmSynWYr8U4yV">here</a></li>
             </ul>
         </section>
-        <section>
+        <section id="additional">
             <h2>Additional Academic Support</h2>
             <ul>
                 <li><a href = "https://lsa.umich.edu/sweetland">Sweetland Writing Center</a></li>
@@ -78,8 +81,14 @@
         </section>
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-    </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
+        <p>&copy; <span id="year"></span> University of Michigan</p>
+      </footer>
+      
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      
     
 </body>
 

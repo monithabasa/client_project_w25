@@ -9,7 +9,10 @@
 <body>
 
     <header>
-            <a href = "">Skip to Main Content</a>
+        <a href="#main" class="skip">Skip to Main Content</a>
+        <div class="img-container">
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -21,26 +24,27 @@
         <h1>Counseling and Psychological Services (CAPS)</h1>
     </header>
 
-    <main>
+    <main id="main" class="container">
         <section>
             <h2>About CAPS</h2>
             <p>CAPS is a service under University Health & Counseling (UHC). UHC supports 
                 the health and well-being of the campus community. CAPS focuses on the mental-health 
                 of students by offering in-person and virtual counseling, focusing on multicultural, 
                 multi-disciplinary practices. Below is a guide to the resources CAPS provides. </p>
-                <ol>
-                    <li>Clinical Services</li>
-                    <li>Outreach and Community Engagement</li>
-                    <li>Training Programs</li>
-                    <li>Especially For...</li>
-                    <li>Resources</li>
-                </ol> 
-        </section>
-        <figure>
-            <img src="images/CAPSDog.jpg" alt="Students petting therapy dog at Therapaws event in library.">
-            <figcaption>Students petting therapy dog at Therapaws event in library.</figcaption>
-        </figure>        
-        <section>
+
+                <div class="section-nav">
+                    <a href="#clinical" class="section-button">Clinical Services</a>
+                    <a href="#outreach" class="section-button">Outreach and Community Engagement</a>
+                    <a href="#training" class="section-button">Training Programs</a>
+                    <a href="#especially" class="section-button">Especially For...</a>
+                    <a href="#resources" class="section-button">Resources</a>
+                  </div>
+                <figure>
+                    <img src="images/CAPSDog.jpg" alt="Students petting therapy dog at Therapaws event in library.">
+                    <figcaption>Students petting therapy dog at Therapaws event in library.</figcaption>
+                </figure>
+        </section>        
+        <section id="clinical">
             <h2>Clinical Services</h2>
             <p>CAPS offers a variety of confidential psychological services to U of M students. 
                 These services include:</p>
@@ -57,7 +61,7 @@
                 </ul>
                 <p>To schedule any appointment visit this <a href = "https://caps.umich.edu/article/mental-health-support-options">link</a></p>
         </section>
-        <section>
+        <section id="outreach">
             <h2>Outreach and Community Engagement</h2>
             <figure>
                 <img src="images/CommunityLQuad.jpg" alt="Small group of students sitting on the grass in the Law Quad.">
@@ -68,19 +72,19 @@
                 reduction, to foster a supportive campus environment. </p>
         </section>
         
-        <section>
+        <section id="training">
             <h2>Training Programs</h2>
             <p>CAPS offers training programs such as APA Accredited Doctoral Internship, 
                 Outreach and Education Social Work Internship, Post Graduate Fellowship, 
                 Psychology Practicum, and Social Work Internship. </p>
         </section>
-        <section>
+        <section id="especially">
             <h2>Especially For...</h2>
             <p>This section provides tailored resources and guidance for specific groups within 
                 the university community, including parents and loved ones, faculty and staff, 
                 graduate students, and student organization leaders. </p>
         </section>
-        <section>
+        <section id="resources">
             <h2>Resources</h2>
             <p>Resources that CAPS offers includes: </p>
             <ul>
@@ -93,8 +97,14 @@
         </section>
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-    </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
+        <p>&copy; <span id="year"></span> University of Michigan</p>
+      </footer>
+      
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      
     
 </body>
 

@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <a href = "">Skip to Main Content</a>
+        <a href="#main" class="skip">Skip to Main Content</a>
+
   <div class="img-container">
         <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
     </div>
@@ -23,20 +24,21 @@
         <h1>Student Success Portal</h1>
 
     </header>
-    <main>
+    <main id="main" class="container">
+
         <section>
             <h2>Welcome to the UM Grad Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Graduate School Success</p>
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
-            <ol>
-                <li>Academic Resources</li>
-                <li>Physical Health</li>
-                <li>Mental Health</li>
-                <li>Life Outside Classroom</li>
-                <li>Contact</li>
-            </ol>
+            <div class="section-nav">
+                <a href="#physical" class="section-button">Physical Health</a>
+                <a href="#mental" class="section-button">Mental Health</a>
+                <a href="#life-outside-classroom" class="section-button">Life Outside Classroom</a>
+              </div>
+              
+              
         </section>
-        <section>
+        <section id="physical">
             <h2>Physical Health</h2>
             <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
             <article>
@@ -57,7 +59,7 @@
             </article>
         </section>
         
-        <section>
+        <section id="mental">
             <h2>Mental Health</h2>
             <p>Maintaining your mental well-being is crucial for thriving in graduate school. Here are resources to support your mental health:</p>
             <article>
@@ -100,7 +102,13 @@
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
+        <p>&copy; <span id="year"></span> University of Michigan</p>
+      </footer>
+      
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      
 </body>
 </html>
